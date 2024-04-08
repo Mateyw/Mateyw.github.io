@@ -10,85 +10,63 @@
 </head>
 
 <body>
-    <div class="heading">
-        <h1>Library</h1>
-    </div>
+    <section class="header">
+        <h1 id="book-library">Library 📚</h1>
+        <button id="add-book-btn">Add Book</button>
+    </section>
 
+    <section class="library">
 
+        <div class="card-box">
 
-    <div class="addBookForm">
-        <form action="#">
-            <div class="field">
-                <label for="author">Name of the author?</label>
-                <input type="text" name="author
-                    " id="author">
+            <div class="card">
+                <button class="card-x">x</button>
+                <p class="title">Title: <span
+                        class="title-name">The Great Gatsby</span>
+                </p>
+                <p class="author">Author: F. Scott Fitzgerald</p>
+                <p class="pages">Pages: 180</p>
+
+                <div class="status-row">
+                    <p class="read-status">Status: Read</p>
+                    <button class="toggle-btn">Toggle</button>
+                </div>
             </div>
 
-            <div class="field">
-                <label for="title">Title of the book?</label>
-                <input type="text" name="title
-                    " id="title">
+            <div class="card">
+                <button class="card-x">x</button>
+                <p class="title">Title: <span
+                        class="title-name">Ulysses</span>
+                </p>
+                <p class="author">Author: James Joyce</p>
+                <p class="pages">Pages: 732</p>
+
+                <div class="status-row">
+                    <p class="read-status">Status: Unread</p>
+                    <button class="toggle-btn">Toggle</button>
+                </div>
             </div>
 
-            <div class="field">
-                <label for="pages">Pages?</label>
-                <input type="number" name="pages
-                    " id="pages" min="1">
+            <div class="card">
+                <button class="card-x">x</button>
+                <p class="title">Title: <span
+                        class="title-name">Don Quixote</span>
+                </p>
+                <p class="author">Author: Miguel de Cervantes</p>
+                <p class="pages">Pages: 1072</p>
+
+                <div class="status-row">
+                    <p class="read-status">Status: Read</p>
+                    <button class="toggle-btn">Toggle</button>
+                </div>
             </div>
-
-            <div class="field">
-                <label for="bookRead">Was the book already read?</label>
-                <input type="text" value="No" id="bookRead" disabled>
-            </div>
-
-            <input type="button" value="Toggle status" id="bookReadBtn">
-
-            <input type="button" value="Add" id="add" onclick="addBookToLibrary()">
-        </form>
-    </div>
-
-    <div class="card-container">
-
-        <div class="card">
-            <p class="author">Author: <span>J.K.Rowling</span></p>
-            <p class="title">Title: <span>Harry Potter</span></p>
-            <p class="pages">Pages: <span>299</span></p>
-            <div class="bookReadDiv">
-                <p class="bookRead">Book read: <span>No</span></p>
-                <button>Toggle</button>
-            </div>
+            
         </div>
-        <div class="card">
-            <p class="author">Author: <span>J.K.Rowling</span></p>
-            <p class="title">Title: <span>Harry Potter</span></p>
-            <p class="pages">Pages: <span>299</span></p>
-            <div class="bookReadDiv">
-                <p class="bookRead">Book read: <span>No</span></p>
-                <button>Toggle</button>
-            </div>
-        </div>
-        <div class="card">
-            <p class="author">Author: <span>J.K.Rowling</span></p>
-            <p class="title">Title: <span>Harry Potter</span></p>
-            <p class="pages">Pages: <span>299</span></p>
-            <div class="bookReadDiv">
-                <p class="bookRead">Book read: <span>No</span></p>
-                <button>Toggle</button>
-            </div>
-        </div>
-        <div class="card">
-            <p class="author">Author: <span>J.K.Rowling</span></p>
-            <p class="title">Title: <span>Harry Potter</span></p>
-            <p class="pages">Pages: <span>299</span></p>
-            <div class="bookReadDiv">
-                <p class="bookRead">Book read: <span>No</span></p>
-                <button>Toggle</button>
-            </div>
-        </div>
-    </div>
-    </div>
 
-    </div>
+        <!-- add/close dialog with javascript -->
+
+    </section>
+
 </body>
 
 </html>
