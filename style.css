@@ -1,234 +1,229 @@
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --bg-white: white;
+    --bg-black: black;
+    --bg-lighter-black: rgb(30,30,30);
+    --bg-custom: #ffdca9;
+    --bg-custom-darker: #f7c376;
+}
 
-
-* {
-    padding: 0;
+*{
+    box-sizing: border-box;
     margin: 0;
-    box-sizing: content-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ,sans-serif;
+    padding: 0;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(255, 218, 107, 0.756);
+body{
+    background: #ffdca9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.heading {
-    font-family: 'MedievalSharp', sans-serif;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    text-align: center;
-    margin-bottom: 200px;
-}
-
-h1 {
-    margin: 30px 0;
-}
-
-.addBookForm {
-    width: 600px !important;
-    height: 400px !important;
-    display: flex;
-    border: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    background: #fff;
-}
-
-form{
-    width: 60vw;
-    height: 40vh;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding-top: 30px;
-    gap: 5px;
-}
-
-
-.field{
-    width: 20vw;
+.header{
+    width: 80vw;
     height: 10vh;
-    border: 1px solid black;
+    margin: 30px auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-}
-
- 
-label{
-    width: 100%;
-    font-weight: 600;
-}
-
-input {
-    display: flex;
-    margin: 5px 0;
-    border: none;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
-    border-radius: 50px;
-    width: 100%;
-    height: 20px;
-    padding-left: 10px;
-    margin-bottom: 15px;
-    background: #fff;
-}
-
-input:focus {
-    outline: none;
-    background: #f2f2f2;
-}
-
-#bookReadBtn{
-    margin-top: 10px;
-    width: 100px;
-    height: 25px;
-    border-radius: 50px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
-    border: none;
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-}
-
-#bookReadBtn:hover {
-    cursor: pointer;
-}
-
-#bookReadBtn:active {
-    transform: scale(0.98);
-    background: #d2d2d2;
-
-}
-
-#add {
-    margin-top: 30px;
-    width: 50px;
-    height: 25px;
-    border-radius: 50px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
-    border: none;
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-    background: rgba(255, 218, 107, 0.756);
-}
-
-#add:hover {
-    cursor: pointer;
-}
-
-#add:active {
-    transform: scale(0.98);
-    background: rgba(244, 185, 9, 0.756);
-
-}
-
-.card-container{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 0 10vw;
-}
-
-.card{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    border: none;
-    width: 25vw;
-    height: 30vh;
-    padding: 25px 25px;
-    line-height: 3;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    background: #fff;
-}
-
-.card > p,
-.card > div > p{
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.card > p > span,
-.card > div > p > span{
-    font-weight: 400;
-}
-
-.card > div > button{
-    font-weight: 600;
-}
-
-.card > .bookReadDiv{
-    display: inline-flex;
-    gap: 20px;
+    justify-content: space-between;
     align-items: center;
 }
 
-.card > .bookReadDiv > button{
-    width: 80px;
-    height: 30px;
+.header > #book-library{
+    font-size: 2rem;
+    border-bottom: 3px solid var(--bg-black);
+}
+
+.header > #add-book-btn,
+.form > .fieldset > button{
+    font-size: 1rem;
     border: none;
-    border-radius: 50px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    height: 37px;
+    background: var(--bg-black);
+    color: var(--bg-white);
 }
 
-.card > .bookReadDiv > button:hover{
-    background: #d3d3d3;
+.header > #add-book-btn:hover,
+.form > .fieldset > button:hover{
+    background: var(--bg-lighter-black);
     cursor: pointer;
-
 }
 
-.card > .bookReadDiv > button:active{
+.header > #add-book-btn:active,
+.form > .fieldset > button:active{
     transform: scale(0.95);
 }
 
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px){
-    .addBookForm {
-        width: 40vw;
-        height: 45vh;
-      }
+.library{
+    position: relative;
+    width: 85vw;
+    margin: 50px auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px){
-    .addBookForm {
-        width: 40vw;
-        height: 50vh;
-      }
+.card-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .addBookForm {
-        width: 30vw;
-        height: 45vh;
-      }
+.card{
+    height: 200px;
+    width: 325px;
+    background: var(--bg-white);
+    border-radius: 20px;
+    border-bottom: 5px solid var(--bg-lighter-black);
+    border-right: 5px solid var(--bg-lighter-black);
+    gap: 30px;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Adding a smooth transition */
+    position: relative;
+
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px){
-    .addBookForm {
-        width: 20vw;
-        height: 50vh;
-      }
+/* .card:hover{
+    transform: scale(1.05);
+} */
+
+.card > .card-x {
+    border: none;
+    background: var(--bg-white);
+    font-weight: 600;
+    font-size: 1rem;
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    color: red;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px){
-    .addBookForm {
-        width: 20vw;
-        height: 45vh;
-      }
+.card > .card-x:hover{
+    cursor: pointer;
 }
+
+.card > .card-x:active{
+    transform: scale(0.8);
+}
+
+.card > p{
+    margin: 15px auto;
+}
+
+.card > .title{
+    margin: 0px auto 5px auto;
+    border-bottom: 3px solid var(--bg-black);
+}
+
+.card > .title > .title-name{
+    font-style: italic;
+    padding-left: 16px;
+    font-size: 1rem;
+
+}
+
+.card > .status-row{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+} 
+
+.card > .status-row > .toggle-btn{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 70px;
+    background: var(--bg-custom);
+}
+
+.card > .status-row > .toggle-btn:hover{
+    cursor: pointer;
+    background: var(--bg-custom-darker);
+}
+
+.card > .status-row > .toggle-btn:active{
+    transform: scale(0.95);
+}
+
+.dialog[open]{
+    position: absolute;
+    top: -20px;
+    margin: 0 auto;
+    /* margin-bottom: 100px; */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    border: none;
+    width: 300px;
+    height: 475px;
+
+
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+}
+
+.form-row > input{
+    margin: 10px 50px 10px 0;
+    border-radius: 10px;
+    border: none;
+    background: #e9effa;
+    padding: 5px;
+}
+
+.form-row > input:focus{
+    outline: none;
+}
+
+.form > .fieldset{
+    border: none;
+}
+
+.form > .fieldset > .legend-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.form > .fieldset > .legend-row > legend,
+.form > .fieldset > .legend-row > .X{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.form > .fieldset > .legend-row > .X{
+    border: none;
+    background: var(--bg-white);
+
+}
+
+.form > .fieldset > .legend-row > .X:hover{
+    cursor: pointer;
+}
+
+.form > .fieldset > .legend-row > .X:active{
+    transform: scale(0.8);
+}
+
+.form > .fieldset > .form-row.status{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form > .fieldset > button{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+::backdrop {
+    backdrop-filter: blur(10px);
+}
+
