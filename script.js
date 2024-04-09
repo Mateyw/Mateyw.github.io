@@ -170,7 +170,6 @@ function checkForTie(board) {
 const restartBtn = document.querySelector('#restart-btn');
 restartBtn.addEventListener('click', () => {
     Game.restart();
-    currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
 })
 
 const startBtn = document.querySelector('#start-btn');
