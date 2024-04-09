@@ -167,12 +167,9 @@
     font-size: 1.2rem;
 }
 
-.profile>#bell-icon:hover::before {
+.profile>#bell-icon:hover {
     cursor: pointer;
-    background: #e2e2e2;
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
+    opacity: 50%;
 }
 
 
@@ -313,10 +310,6 @@ h3 {
     transition: 0.2s ease-in-out;
 }
 
-.prj:hover {
-    transform: scale(1.1);
-}
-
 .prj>.content>h4,
 .prj>.content>p {
     padding: 5px 12px;
@@ -349,10 +342,6 @@ h3 {
     width: 25px;
 }
 
-.buttons>img:hover {
-    cursor: pointer;
-    opacity: 0.6;
-}
 
 .topic2,
 .topic3 {
