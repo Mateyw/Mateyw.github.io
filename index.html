@@ -4,233 +4,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <title>Mateusz's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset-styles.css">
+    <script src="./js/script.js" defer></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
 
-        <sidebar class="sidebar">
+    <section class="socials">
+        <div class="social">
 
-            <div class="dashboard">
-                <img src="https://shukrirahmat.github.io/admin-dashboard/images/sidebar/view-dashboard.svg" alt="">
-                <span id="dashboard">Dashboard</span>
-            </div>
+            <a href="https://github.com/Mateyw"><i class="devicon-github-original github"></i></a>
 
-            <div class="nav nav-top">
-                <ul>
-                    <li class="child"><img src="	https://shukrirahmat.github.io/admin-dashboard/images/sidebar/home.svg" alt="">
-                        Home</li>
-                    <li class="child"><img src="	https://shukrirahmat.github.io/admin-dashboard/images/sidebar/card-account-details-outline.svg" alt="">
-                        Profile</li>
-                    <li class="child"><img src="	https://shukrirahmat.github.io/admin-dashboard/images/sidebar/message-reply.svg" alt="">
-                        Messages</li>
-                    <li class="child"><img src="	https://shukrirahmat.github.io/admin-dashboard/images/sidebar/clock-time-three.svg" alt="">
-                        History</li>
-                    <li class="child"><img src="	https://shukrirahmat.github.io/admin-dashboard/images/sidebar/note-multiple.svg" alt="">
-                        Tasks</li>
-                    <li class="child"><img src="https://shukrirahmat.github.io/admin-dashboard/images/sidebar/account-group.svg" alt="">
-                        Communities</li>
-                </ul>
-            </div>
+        </div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/mateusz-mazik/"><i class="devicon-linkedin-plain linkedin"></i></a>
+        </div>
+        <div class="social">
+            <a href="#"><i class="devicon-facebook-plain facebook"></i></a>
+        </div>
+        <div class="social">
+            <a href=""><i class="devicon-git-plain git"></i></a>
+        </div>
+        <!-- <div class="social">
+            <a href=""><i class="devicon--plain"></i></a>
+        </div> -->
+    </section>
 
-            <div class="nav nav-bottom">
-                <ul>
-                    <li class="child"><img src="https://butterdogg1467.github.io/Admin-Dashboard/icons/cog-outline.svg" alt="">
-                    Settings</li>
-                    <li class="child"><img src="https://butterdogg1467.github.io/Admin-Dashboard/icons/help-box-outline.svg" alt="">
-                    Support</li>
-                    <li class="child"><img src="https://butterdogg1467.github.io/Admin-Dashboard/icons/shield-check-outline.svg" alt="">
-                    Privacy</li>
-                </ul>
-            </div>
+    <section class="header" id="header">
+        <div class="credentials">
+            <span id="mm">MM</span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <button id="resume-btn">RESUME</button>
+            </ul>
+        </nav>
+    </section>
 
-
-
-        </sidebar>
-
-        <header class="header">
-            <div class="search-bar">
-                <i class="fa fa-search" aria-hidden="true"></i>
-                <input type="text" name="search" id="search">
-
-            </div>
-
-            <div class="profile">
-                <i class="fa fa-bell" aria-hidden="true" id="bell-icon"></i>
-                <div class="img-frame">
-                    <img src="https://images.unsplash.com/photo-1555274175-75f4056dfd05?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="pfp" id="pfp">
-                </div>
-                <p id="name">Mateusz Mazik</p>
-            </div>
-
-            <div class="hi-there">
-
-                <div class="pic">
-                    <div class="img-frame">
-                        <img src="https://images.unsplash.com/photo-1555274175-75f4056dfd05?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="pfp" id="pfp">
-                    </div>
-                </div>
-
-                <div class="text">
-                    <span>Hi there,</span>
+    <section class="home" id="home">
+        <div class="home-left">
+            <div class="introduction">
+                <h1 class="heading">About Me</h1>
+                <p id="introduction-info">Hey there! <br>
+                    <span id="name" class="visible">My name is <span id="my-name">MATEUSZ MAZIK</span>,</span>
                     <br>
-                    <p id="user">Mateusz Mazik (@mateusz)</p>
+                <div class="user-info">
+                    <span id="job-title" class="auto-type"></span>
+                    <br>
                 </div>
+                </p>
             </div>
-
-            <div class="new-up-share">
-                <input type="button" value="New" id="new-btn">
-                <input type="button" value="Upload" id="upload-btn">
-                <input type="button" value="Share" id="share-btn">
+        </div>
+        <div class="home-right">
+            <div class="pfp">
+                <img src="./img/mm-pfp.jpeg" alt="" id="pfp">
             </div>
-        </header>
+        </div>
+    </section>
 
-        <main class="main">
-
-            <div class="left-main">
-                <h3 class="topic">Your Projects</h3>
-                <div class="projects">
-                    <div class="prj">
-
-                        <div class="content">
-                            <h4 class="title">Super Cool Project</h4>
-                            <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, sequi nemo
-                                architecto consectetur illo quasi earum exercitation...</p>
-                        </div>
-                        <div class="buttons">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/star-plus-outline.svg" alt="">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/eye-plus.svg" alt="">
-                            <img src="	https://shukrirahmat.github.io/admin-dashboard/images/card/share-variant-outline.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="prj">
-                        <div class="content">
-                            <h4 class="title">Less Cool Project</h4>
-                            <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, sequi nemo
-                                architecto consectetur illo quasi earum exercitation...</p>
-                        </div>
-                        <div class="buttons">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/star-plus-outline.svg" alt="">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/eye-plus.svg" alt="">
-                            <img src="	https://shukrirahmat.github.io/admin-dashboard/images/card/share-variant-outline.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="prj">
-                        <div class="content">
-                            <h4 class="title">Ad Blocker</h4>
-                            <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, sequi nemo
-                                architecto consectetur illo quasi earum exercitation...</p>
-                        </div>
-                        <div class="buttons">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/star-plus-outline.svg" alt="">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/eye-plus.svg" alt="">
-                            <img src="	https://shukrirahmat.github.io/admin-dashboard/images/card/share-variant-outline.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="prj">
-                        <div class="content">
-                            <h4 class="title">Money Maker</h4>
-                            <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, sequi nemo
-                                architecto consectetur illo quasi earum exercitation...</p>
-                        </div>
-                        <div class="buttons">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/star-plus-outline.svg" alt="">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/eye-plus.svg" alt="">
-                            <img src="	https://shukrirahmat.github.io/admin-dashboard/images/card/share-variant-outline.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="prj">
-                        <div class="content">
-                            <h4 class="title">Beginner Project</h4>
-                            <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, sequi nemo
-                                architecto consectetur illo quasi earum exercitation...</p>
-                        </div>
-                        <div class="buttons">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/star-plus-outline.svg" alt="">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/eye-plus.svg" alt="">
-                            <img src="	https://shukrirahmat.github.io/admin-dashboard/images/card/share-variant-outline.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="prj">
-                        <div class="content">
-                            <h4 class="title">Intermediate Project</h4>
-                            <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, sequi nemo
-                                architecto consectetur illo quasi earum exercitation...</p>
-                        </div>
-                        <div class="buttons">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/star-plus-outline.svg" alt="">
-                            <img src="https://shukrirahmat.github.io/admin-dashboard/images/card/eye-plus.svg" alt="">
-                            <img src="	https://shukrirahmat.github.io/admin-dashboard/images/card/share-variant-outline.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right-main">
-                
-                    <div class="announcements">
-                        <h3 class="topic2">Announcement</h3>
-                        <div class="announcement">
-                            <h5 class="sub-title">Site Maintenance</h5>
-                            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et officiis expedita commodi suscipit ...</p>
-                            <hr>
-                            <h5 class="sub-title">Community Share Day</h5>
-                            <p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, quia consectetur! Optio odio, quo consequuntur labore accusantium nihil laudantium nostrum minus...</p>
-                            <hr>
-                            <h5 class="sub-title">Update Privacy Policy</h5>
-                            <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quos ipsum reiciendis inventore consectetur ea quod ...</p>
-                            
-                        </div>
-                    </div>
-                    <div class="trendings">
-                        <h3 class="topic3">Trending</h3>
-
-                        <div class="trending">
-                            <div class="trending-content">
-                                <div class="trending-pfp">
-                                    <img src="https://images.unsplash.com/photo-1580477667995-2b94f01c9516?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                                </div>
-                                <div class="trending-profile">
-                                    <p class="user-name">@mateusz</p>
-                                    <small class="user-desc">The Odin Project</small>
-                                </div>
-                                <div class="trending-pfp">
-                                    <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                                </div>
-                                <div class="trending-profile">
-                                    <p class="user-name">@charlotte</p>
-                                    <small class="user-desc">The Odin Project</small>
-                                </div>
-                                <div class="trending-pfp">
-                                    <img src="https://plus.unsplash.com/premium_photo-1682124752476-40db22034a58?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                                </div>
-                                <div class="trending-profile">
-                                    <p class="user-name">@robert</p>
-                                    <small class="user-desc">The Odin Project</small>
-                                </div>
-                                <div class="trending-pfp">
-                                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                                </div>
-                                <div class="trending-profile">
-                                    <p class="user-name">@lousie</p>
-                                    <small class="user-desc">The Odin Project</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </main>
-
+    <div class="hr">
+        <hr>
     </div>
 
+    <section class="projects" id="projects">
+        <div class="card">
+            <div class="card-left">
+                <p class="prj-title"><span class="span-title">Sign Up Form</span> Project</p>
+                <p class="prj-desc">This project is about a simple Sign Up Form which I coded in HTML & CSS without any functionality of JavaScript.</p>
+                <div class="tech-stack-container">
+                    <p class="tech-stack"><span class="ts">Tech Stack:</span><br> HTML5, CSS3</p>
+                </div>
+                <div class="link">
+                    <a href="http://">
+                        <i class="fa-solid fa-code"></i>
+                    </a>
+                    <a href="http://">
+                        <i class="devicon-github-original github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card-right">
+                <!-- scrrenshot of the main page of the project -->
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-left">
+                <p class="prj-title"><span class="span-title">Library</span> Project</p>
+                <p class="prj-desc">This project is about a Library which enables you to manage, delete or add your favorite books and mark those that you have already read/not read yet.</p>
+                <div class="tech-stack-container">
+                    <p class="tech-stack"><span class="ts">Tech Stack:</span><br> HTML5, CSS3, JavaScript</p>
+                </div>
+                <div class="link">
+                    <a href="http://">
+                        <i class="fa-solid fa-code"></i>
+                    </a>
+                    <a href="http://">
+                        <i class="devicon-github-original github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card-right">
+                <!-- scrrenshot of the main page of the project -->
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-left">
+                <p class="prj-title"><span class="span-title">Admin Dashboard</span> Project</p>
+                <p class="prj-desc">This project is about an Admin Dashboard where you can read through different articles, view a list of trending people on the web page and more.</p>
+                <div class="tech-stack-container">
+                    <p class="tech-stack"><span class="ts">Tech Stack:</span><br> HTML5, CSS3</p>
+                </div>
+                <div class="link">
+                    <a href="http://">
+                        <i class="fa-solid fa-code"></i>
+                    </a>
+                    <a href="http://">
+                        <i class="devicon-github-original github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card-right">
+                <!-- scrrenshot of the main page of the project -->
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-left">
+                <p class="prj-title"><span class="span-title">Portfolio</span> Project</p>
+                <p class="prj-desc">This project is about my personal Portfolio which I created to prove my skills in Web Development & Web Design.</p>
+                <div class="tech-stack-container">
+                    <p class="tech-stack"><span class="ts">Tech Stack:</span><br> HTML5, CSS3, JavaScript</p>
+                </div>
+                <div class="link">
+                    <a href="http://">
+                        <i class="fa-solid fa-code"></i>
+                    </a>
+                    <a href="http://">
+                        <i class="devicon-github-original github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card-right">
+                <!-- scrrenshot of the main page of the project -->
+                <img src="" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="hr">
+        <hr>
+    </div>
+
+    <section class="skillset">
+        <h1 class="heading">My <span id="skillset">Skillset</span></h1>
+        <div class="skills">
+            <div class="skill">
+                <i class="devicon-html5-plain-wordmark"></i>
+            </div>
+            <div class="skill">
+                <i class="devicon-css3-plain-wordmark"></i>
+            </div>
+            <div class="skill">
+                <i class="devicon-javascript-plain"></i>
+            </div>
+        </div>
+    </section>
+
+    <div class="hr">
+        <hr>
+    </div>
+
+    <section class="contact" id="contact">
+        <h1 class="heading">Contact Me!</h1>
+        <form action="#" class="form" id="form">
+            <div class="form-row">
+                <label for="email">E-Mail</label>
+                <input type="email" name="email" id="email" placeholder="Enter your E-Mail" required>
+            </div>
+            <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Send a message" required></textarea>
+            </div>
+            <button id="send-btn">Send</button>
+        </form>
+    </section>
+
+    <div class="hr">
+        <hr>
+    </div>
+
+    <section class="footer" id="footer">
+        <span id="copyright">
+            All rights reserved.<br>
+            &copy; <span id="year"></span> <span id="copy-name">Mateusz Mazik</span>
+        </span>
+    </section>
 
 </body>
 
