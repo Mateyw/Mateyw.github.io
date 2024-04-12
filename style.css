@@ -249,7 +249,7 @@ body::-webkit-scrollbar {
     word-wrap: nowrap;
     overflow: hidden;
     animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
-    font-size: 4rem;
+    font-size: 3.2rem;
 }
 
 @keyframes typing {
@@ -269,7 +269,7 @@ body::-webkit-scrollbar {
 
 .user-info {
     font-size: 4.4rem;
-    letter-spacing: -10px;
+    letter-spacing: -8px;
     margin-top: 50px;
 }
 
@@ -333,11 +333,7 @@ body::-webkit-scrollbar {
     border-left: 1px solid var(--secondary-main-color);
     box-shadow: 4px 4px 1px var(--secondary-main-color);
     transition: transform .2s ease-in-out;
-}
-
-.projects > .card:hover{
-    transform: scale(1.05);
-    cursor: pointer;
+    overflow: hidden;
 }
 
 .card-left{
@@ -377,6 +373,7 @@ span.span-title{
 }
 .tech-stack > .ts{
     color: var(--secondary-main-color);
+    font-size: 1.2rem;
 }
 
 .link{
@@ -391,8 +388,17 @@ span.span-title{
     transition: transform .2s ease;
 }
 
+.link > a {
+    transition: transform .2s linear;
+}
+
 .link > a > i:active{
     transform: scale(0.9);
+} 
+
+.link > a:hover{
+    transform: rotate(15deg);
+    color: var(--color-github);
 }
 
 .card-right{
